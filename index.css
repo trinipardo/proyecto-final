@@ -8,7 +8,14 @@ body {
   padding: 0;
   width: 100%;
 }
+.header {
+  border-top: 1px solid gainsboro;
+  text-align: center;
+  height: 350px;
+  background-image: url(header.png);
+  background-size: contain;
 
+}
 header nav {
   height: 100px;
   width: 100%;
@@ -17,6 +24,7 @@ header nav {
   position: fixed;
   z-index: 999;
   box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
+
 }
 header nav ul {
   margin: 0;
