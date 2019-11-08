@@ -54,45 +54,51 @@ header a {
 footer {
   border-top: 1px solid gainsboro;
   text-align: center;
-  height: 200px;
+  height: 300px;
   background-image: url(footer.jpg);
   background-size: contain;
 }
-footer ul {
-  margin: 50px 15%;
-  padding: 0;
-  overflow: hidden;
+
+
+.logofooter{
+width: 5px;
+float: left;
+margin-top: 50px;
+}
+
+.nombresfooter{
+  width: 5px;
+  float: left;
+  margin-top: 50px;
+}
+
+footer ul.ul-logo{
+  float: left;
+  margin-top: -30px;
+  width: 10px;
 }
 footer ul li {
-  float: left;
   width: 25%;
   padding: 10px 20px;
   font-size: 1.5rem;
   font-weight: bold;
+  position: relative;
 }
 
 footer ul li {
   list-style-type: none;
 }
 footer div {
-  margin-top: 50px;
+  margin-top: 80px;
 }
-/* GENERAL */
 .color-white {
   color: white;
 }
-.color-gold {
-  color: gold;
-}
+
 .color-gray {
   color: gray;
 }
-.background-green {
-  background-color: green;
-}
-.background-red {
-  background-color: red;
-}
+
 .display-none {
   display: none;
 }
@@ -106,152 +112,4 @@ footer div {
   background-color: transparent;
   color: gray;
   border: 1px solid gray;
-}
-section.js {
-  margin: 50px 0;
-  padding: 10px 0;
-}
-section.js h2.h2-js {
-  text-align: center;
-}
-/* GENERAL */
-
-/** MEDIA QUERIES **/
-/* INICIO MOBILE MEDIA QUERY */
-@media (max-width: 420px) {
-  header nav {
-    height: 25vw;
-    min-height: 60px;
-  }
-  header nav ul.ul-menu {
-    display: none;
-  }
-  header ul li.li-logo img {
-    margin-top: 2.5%;
-    min-width: 250px;
-  }
-  h2.subtitle1 {
-    font-size: 3rem;
-  }
-  h2.subtitle2 {
-    font-size: 2rem;
-  }
-  h2.subtitle3 {
-    font-size: 12rem;
-  }
-  h2.subtitle4 {
-    font-size: 5rem;
-    left: 47%;
-    top: 162px;
-  }
-  h2.subtitle5 {
-    left: 66%;
-    top: 192px;
-  }
-  main section.main div button {
-    left: 30%;
-    top: 260px;
-  }
-  main section.main div.areas-container {
-    display: none;
-  }
-  main section.section-user article {
-    overflow: none;
-  }
-  main section.section-user article div.img-user {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-  main section.section-user article div.data-user {
-    float: none;
-    width: 100%;
-    text-align: center;
-    padding-top: 0;
-    padding-bottom: 50px;
-  }
-
-/* INICIO 6) MOBILE */
-  main section.products article {
-width: 100%;
-  }
-/* FIN 6) MOBILE */
-
-  section.section-division article.article-division {
-    width: 98%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
-
-  main section.contact div img {
-    margin-left: 0;
-  }
-
-  main section.contact {
-    padding: 10% 1%;
-  }
-
-  footer ul.ul-menu {
-    justify-content: center;
-  }
-  footer li.li-menu {
-    float: none;
-    width: 100%;
-    padding-bottom: 10px;
-  }
-  footer li.li-menu a:hover {
-    text-decoration: underline;
-  }
-}
-/* FIN MOBILE MEDIA QUERY */
-
-/* INICIO TABLET MEDIA QUERY */
-@media (min-width: 421px) and (max-width: 800px){
-  nav ul.ul-menu {
-    display: none;
-  }
-  h2.subtitle1 {
-    font-size: 4rem;
-  }
-  h2.subtitle2 {
-    font-size: 2.5rem;
-  }
-  h2.subtitle4 {
-    left: 51%;
-    top: 260px;
-  }
-  h2.subtitle5 {
-    left: 64%;
-    top: 286px;
-  }
-  main section.main div button {
-    left: 65%;
-    top: 365px;
-  }
-
-/* INICIO 5) TABLET */
-  section.products article {
- width: 49%;
-  }
-/* FIN 5) TABLET */
-
-  section.section-division article.article-division {
-    width: 48%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
-  main section.contact div img {
-    margin-left: 15vw;
-  }
-  footer ul.ul-menu {
-    justify-content: center;
-  }
-  footer li.li-menu {
-    float: none;
-    width: 100%;
-    padding-bottom: 10px;
-  }
-  footer li.li-menu a:hover {
-    text-decoration: underline;
-  }
 }
