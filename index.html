@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> My Web Syte</title>
-    <script src="css/ukit.css"></script>
-    <script src="js/ukit.js"  </script>
-  </head>
-  <body>
-    <header>
+    <title>My Web Syte</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
         <nav>
             <ul class="ul-logo">
-                <li class="li-logo"><img src="img/dh.png" alt="logo"></li>
+                <li class="li-logo"><img src="logo movie.jpg" alt="logo"></li>
             </ul>
             <ul class="ul-menu">
                 <li class="li-menu"><a class="color-gray" href="#home">home</a></li>
@@ -20,6 +21,181 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="main" id="home">
+            <div class="main-titles">
+                <h2 class="color-white subtitle1">the biggest</h2>
+                <h2 class="color-white subtitle2">sale of the day</h2>
+                <h2 class="color-gold subtitle3">70</h2>
+                <h2 class="color-gold subtitle4">%</h2>
+                <h2 class="color-gold subtitle5">off</h2>
+                <button class="button" type="button" name="button">shop now</button>
+            </div>
+            <div class="areas-container">
+                <article class="">
+                    <img src="img/ad_01.png" alt="">
+                    <p class="areas-title color-gold">men's</p>
+                </article>
+                <article class="">
+                    <img src="img/ad_02.png" alt="">
+                    <p class="areas-title color-gold">girl's</<p>
+                </article>
+                <article class="">
+                    <img src="img/ad_03.png" alt="">
+                    <p class="areas-title color-gold">shoes</p>
+                </article>
+                <article class="">
+                    <img src="img/ad_04.png" alt="">
+                    <p class="areas-title color-gold">chip</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <article class="">
+                <img src="img/1.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/2.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/3.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/4.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/5.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/6.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/7.jpg" alt="product">
+            </article>
+            <article class="">
+                <img src="img/8.jpg" alt="product">
+            </article>
+        </section>
+        <section class="section-division">
+            <h2>featured sections</h2>
+            <article class="article-division color-gold">
+                shirts
+            </article>
+            <article class="article-division color-gold">
+                pants
+            </article>
+            <article class="article-division color-gold">
+                dresses
+            </article>
+            <article class="article-division color-gold">
+                shoes
+            </article>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-title">
+                <div class="img-container">
+                    <img src="img/email.png" alt="">
+                </div>
+                <h2>Contact</h2>
+            </div>
+                    <!-- 7) FORMULARIO -->
+            <!-- <form class="contact-form" action="index.html" method="post">
+                <fieldset>
+ <legend>Tu informacion:</legend>
+     <p>
+   <label>
+             Correo electronico:
+         <input type="email" name="correo" placeholder="example@hotmail.com"value="" required/>
+ </label>
+   </p>
+       <p>
+   <label>
+                                 Genero:
+                                 <select name="genero">
+                                   <option value="g" disabled selected>Genero</option>
+                                   <option value="Femenino">Femenino</option>
+                                   <option value="Masculino">Masculino</option>
+                                   <option value="Indefinido">Indefinido</option>
+                             </select>
+                                 </p>
+                                 <p>
+                                   <label>
+                                     Nacimiento:
+                                     <input type="date" name="nacimiento" value="">
+                                   </label>
+                                 </p>
+                               </fieldset>
+                               <fieldset>
+                                     <legend>Confirmacion</legend>
+                                     <ul>
+                                       <li>
+                                         <label>
+                                           Acepto terminos y condiciones del sitio
+                                           <input type="checkbox" name="checkbox">
+                                         </label>
+                                       </li>
+                                       <li>
+                                         <label>
+                                           Deseo recibir ofertas y novedades del sitio
+                                           <input type="checkbox" name="checkbox">
+                                         </label>
+                                       </li>
+                                     </ul>
+                                     <p>
+                                     <input type="submit" name="enviar">
+                                     </p>
+                                   </fieldset>
+            </form> Una opcion de hacer formulario
+          -->
+             <form class="contact-form" action="index.html" method="post">
+             <label for="email"> Correo electronico
+               <input id="email" type="email" name="" value="">
+             </label>
+             <label for="genero"> Genero
+<select class="genero" name="">
+<option value="g" disabled selected>Genero</option>
+<option value="Femenino">Femenino</option>
+<option value="Masculino">Masculino</option>
+<option value="Indefinido">Indefinido</option>
+</select>
+             </label>
+  <label for="nacimiento"> Nacimiento
+    <input id="nacimiento"type="date" name="" value="">
+  </label>
+  <fieldset>
+    <legend>Confirmacion</legend>
+  <label for="">aceptar termino y condiciones
+<input type="checkbox" name="checkbox" value="">
+  </label>
+  <label for="">Deseo recibir ofertas y novedades del sitio
+<input type="checkbox" name="checkbox" value="">
+  </label>
+</fieldset>
+  <p>
+  <input type="submit" name="enviar">
+  </p>
+             </form>
+        </section>
+        <section id="js-1" class="js">
+            <h2 class="h2-js" id="todasLasNotas"></h2>
+        </section>
+        <section id="js-2" class="js">
+            <h2 class="h2-js" id="usuario"></h2>
+        </section>
+    </main>
+    <footer>
+        <ul class="ul-menu">
+            <li class="li-menu"><a class="color-gray" href="#home">home</a></li>
+            <li class="li-menu"><a class="color-gray" href="#user">user</a></li>
+            <li class="li-menu"><a class="color-gray" href="#products">products</a></li>
+            <li class="li-menu"><a class="color-gray" href="#contact">contact</a></li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="js/notocar.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+
+
 
   </body>
 </html>
