@@ -3,7 +3,7 @@ window.onload = function(){
   var homeLink = document.getElementById('homeLink');
   var peliculasLink = document.getElementById('peliculasLink');
   var seriesLink = document.getElementById('seriesLink');
-  var seriesGenero = document.getElementsByClassName('seriesGenero')
+  var seriesGenero = document.getElementById('seriesGenero')
   homeLink.onclick = function(){
     window.location.href = 'index.html';
   }
