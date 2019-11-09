@@ -8,20 +8,18 @@ body {
   padding: 0;
   width: 100%;
 }
-.header {
+.topHeader {
   border-top: 1px solid gainsboro;
   text-align: center;
-  height: 350px;
-  background-image: url(header.png);
+  height: 150px;
   background-size: contain;
-
 }
 header nav {
-  height: 100px;
   width: 100%;
+  min-width:900px;
   background-color: white;
-  overflow: hidden;
   position: fixed;
+  background-color:;
   z-index: 999;
   box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
 
@@ -34,13 +32,10 @@ header nav ul {
 header nav ul.ul-logo {
   float: left;
   margin-top: -20px;
-
 }
 header nav ul.ul-menu {
   margin-top: 20px;
-  float: right;
-  overflow: hidden;
-  width: 60%;
+  float: left;
 }
 header ul li.li-logo img {
   width: 25%;
@@ -61,16 +56,14 @@ header a {
 
 footer {
   border-top: 1px solid gainsboro;
-  text-align: center;
-  height: 350px;
-  background-image: url(footer.jpg);
+  margin:auto;
+  background-image: url(../images/footer.jpg);
   background-size: contain;
 }
 
 
 .logofooter{
 width: 1px;
-float: left;
 margin-top: 50px;
 }
 
@@ -97,9 +90,7 @@ footer ul li {
 footer ul li {
   list-style-type: none;
 }
-footer div {
-  margin-top: 80px;
-}
+
 .color-white {
   color: white;
 }
