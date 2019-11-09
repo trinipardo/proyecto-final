@@ -86,7 +86,9 @@ footer ul li {
   font-weight: bold;
   position: relative;
 }
-
+.divdelfooter {width:1000px; margin:auto; height:100%; }
+.divdelaimagen {padding: 20px; display:inline-block;}
+.divdelosnombres{color:white; display:inline-block; float:right;'}
 footer ul li {
   list-style-type: none;
 }
