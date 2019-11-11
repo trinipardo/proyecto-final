@@ -80,7 +80,7 @@ footer {
   border: solid 3px #FF00CD;
 
 }
-h1 {margin: auto; padding: 20px 20px;}
+h1 {margin: auto; padding: 20px 20px; text-align: center;}
 
 .logofooter{
 width: 1px;
