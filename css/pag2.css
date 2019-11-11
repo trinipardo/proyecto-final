@@ -1,0 +1,138 @@
+body {
+  font-family: Poiret One;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+.topHeader {
+  border-top: 1px solid gainsboro;
+  text-align: center;
+  height: 157px;
+  background-size: contain;
+}
+header nav {
+  width: 100%;
+  min-width:900px;
+  background-color: white;
+  position: fixed;
+  background-color:white;
+  z-index: 999;
+  border: solid 3px #FF00CD;
+
+
+}
+.mainContainer{background-color: #A5EBE8;}
+#dataContainer{width: 1000px; margin:auto}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+header nav ul.ul-logo {
+  float: left;
+
+  width: 350px;
+  padding: 30px;
+}
+header nav ul.ul-menu {
+  margin-top: 25px;
+  float: left;
+  justify-content: space-around;
+
+}
+header ul li.li-logo img {
+  width: 24%;
+  text-align: center;
+
+}
+header ul li {
+  list-style-type: none;
+  font-size: 40px;
+}
+header ul li.li-menu{
+  float: left;
+  padding: 30px 20px;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+input {
+  font-size: 30px;
+}
+
+
+header a {
+  text-decoration: none;
+  color: black;
+
+}
+
+
+footer {
+  margin:auto;
+  background-image: url(../images/footer.jpg);
+  background-size: contain;
+  border: solid 3px #FF00CD;
+
+}
+
+
+.logofooter{
+width: 1px;
+margin-top: 50px;
+
+}
+.divdelaimagen img {width: 150px;}
+
+.nombresfooter{
+  width: -10px;
+  float: right;
+  margin-top: 90px;
+  height: 1px;
+}
+
+footer ul.ul-logo{
+  float: left;
+  margin-top: -30px;
+  width: 10px;
+}
+footer ul li {
+  width: 25%;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.divdelfooter {width:1000px; margin:auto; height:100%; border: }
+.divdelaimagen {padding: 20px; display:inline-block;}
+.divdelosnombres{color:white; display:inline-block; float:right; font-size: 30px;padding-top: 70px;}
+footer ul li {
+  list-style-type: none;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-gray {
+  color: gray;
+}
+
+.display-none {
+  display: none;
+}
+.button {
+  border: 1px solid gainsboro;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  background-color: rgb(242, 242, 234);
+}
+.button:hover {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
