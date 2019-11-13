@@ -27,3 +27,4 @@ window.onload = function(){
       });
 
 }
+    //.catch (function (errores)){console.log(errores)};//
