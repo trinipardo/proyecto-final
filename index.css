@@ -1,3 +1,4 @@
+
 body {
   font-family: Poiret One;
   font-size: 1rem;
@@ -7,30 +8,16 @@ body {
   padding: 0;
   width: 100%;
 }
-.topHeader {
-  border-top: 1px solid gainsboro;
-  text-align: center;
-  height: 157px;
-  background-size: contain;
-}
+
 header nav {
+  height: 100px;
   width: 100%;
-  min-width:900px;
   background-color: white;
+  overflow: hidden;
   position: fixed;
-  background-color:white;
   z-index: 999;
-  border: solid 3px #FF00CD;
-
-
+  box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
 }
-h1 {
-  margin: auto;
-  padding: 20px; text-align: center}
-
-.mainContainer{background-color: #A5EBE8;}
-#dataContainer{width: 1000px; margin:auto}
-
 header nav ul {
   margin: 0;
   padding: 0;
@@ -38,64 +25,47 @@ header nav ul {
 }
 header nav ul.ul-logo {
   float: left;
+  margin-top: -20px;
 
-  width: 350px;
-  padding: 30px;
 }
 header nav ul.ul-menu {
-  margin-top: 25px;
-  float: left;
-  justify-content: space-around;
-
+  margin-top: 20px;
+  float: right;
+  overflow: hidden;
+  width: 60%;
 }
 header ul li.li-logo img {
-  width: 24%;
-  text-align: center;
-
+  width: 25%;
 }
 header ul li {
   list-style-type: none;
-  font-size: 40px;
 }
 header ul li.li-menu{
   float: left;
-  padding: 30px 20px;
-  font-size: 30px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
   font-weight: bold;
-
 }
-input {
-  font-size: 30px;
-}
-
-
 header a {
   text-decoration: none;
-  color: black;
-
 }
 
-table, th{
-  border: 1px solid black;
-  padding: 50px;
-}
 
 
 footer {
-  margin:auto;
-  background-image: url(../images/footer.jpg);
+  border-top: 1px solid gainsboro;
+  text-align: center;
+  height: 350px;
+  background-image: url(footer.jpg);
   background-size: contain;
-  border: solid 3px #FF00CD;
-
 }
 
 
 .logofooter{
 width: 1px;
+float: left;
 margin-top: 50px;
-
 }
-.divdelaimagen img {width: 150px;}
 
 .nombresfooter{
   width: -10px;
@@ -116,13 +86,13 @@ footer ul li {
   font-weight: bold;
   position: relative;
 }
-.divdelfooter {width:1000px; margin:auto; height:100%; border: }
-.divdelaimagen {padding: 20px; display:inline-block;}
-.divdelosnombres{color:white; display:inline-block; float:right; font-size: 30px;padding-top: 70px;}
+
 footer ul li {
   list-style-type: none;
 }
-
+footer div {
+  margin-top: 80px;
+}
 .color-white {
   color: white;
 }
@@ -139,9 +109,22 @@ footer ul li {
   padding: 8px 20px;
   text-transform: uppercase;
   background-color: rgb(242, 242, 234);
+
 }
 .button:hover {
   background-color: transparent;
   color: gray;
   border: 1px solid gray;
 }
+
+@media only screen and (max-width: 768px){
+
+  img.uk-align-center {
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+    height: 100%;
+  }
+
+  }
