@@ -1,14 +1,15 @@
 window.onload = function(){
 
-  var homeLink = document.getElementById('homeLink');
-  var peliculasLink = document.getElementById('peliculasLink');
-  var seriesPorGenero = document.getElementById('seriesLink');
+  var homeLink = document.getElementById("HomeLink");
+  var Generoslink = document.getElementById("Generoslink");
+  var seriesPorGenero = document.getElementById("seriesPorGenero");
+  var seriesGenero = document.getElementById("seriesGenero")
   //var seriesGenero = document.getElementById('seriesGenero')
-  homeLink.onclick = function(){
+  HomeLink.onclick = function(){
     window.location.href = 'index.html';
   }
 
-  peliculasLink.onclick = function(){
+  Generoslink.onclick = function(){
       window.location.href = "pag2.html";
 
 
@@ -19,6 +20,7 @@ seriesPorGenero.onclick = function (){
  //seriesGenero.onclick = function (){
 //   window.location.href = "pag4.html"
  }//
+<<<<<<< HEAD
 
  var apiKey = "e3bcfbf11e6b8143b068f8b59c89e7bf";
 
@@ -40,3 +42,5 @@ seriesPorGenero.onclick = function (){
    });
 
 }
+=======
+>>>>>>> master
