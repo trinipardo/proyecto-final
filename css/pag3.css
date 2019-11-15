@@ -25,10 +25,11 @@ header nav {
 
 }
 h1 {
-  margin: auto; 
-  padding: 20px;}
+  margin: auto;
+  padding: 30px; text-align: center;
+color: white;}
 
-.mainContainer{background-color: #A5EBE8;}
+.mainContainer{background-color: black;}
 #dataContainer{width: 1000px; margin:auto}
 
 header nav ul {
