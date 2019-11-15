@@ -77,11 +77,11 @@ header a {
 }
 
 table, th{
-  border: 1px solid #FF00CD;
+  border: 2px solid #FF00CD;
   padding: 50px;
 }
 
-table tr th a{ color: white; text-decoration: none;}
+table tr th a{ color: white; text-decoration: none;font-size: 30px;}
 
 footer {
   margin:auto;
