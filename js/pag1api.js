@@ -28,3 +28,19 @@ window.onload = function(){
 
 }
     //.catch (function (errores)){console.log(errores)};//
+
+    fetch ('https://api.themoviedb.org/3/tv/top_rated?page=1&language=en-US&api_key=%3C%3Capi_key%3E%3E')
+    .then(function(response){ return response.json(); })
+    .then(
+      function (datos2){
+        var toprated = document.getElementById ('dataContainer');
+
+        var series = datos2.results;
+        console.log(series)
+
+        for(indice = 0; indice < series.length; indice++){
+          //innerHTML accede al contenido que esta adentro de una etiqueta
+          toprated.innerHTML += series[indice].title + "<br />";
+
+        }
+      });
