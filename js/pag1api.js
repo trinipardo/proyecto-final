@@ -29,6 +29,8 @@ window.onload = function(){
 
 
 }
+
+
     //.catch (function (errores)){console.log(errores)};//
     // FETCH DE SERIES TOP RATED
 

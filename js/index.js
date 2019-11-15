@@ -21,6 +21,8 @@ seriesPorGenero.onclick = function (){
 //   window.location.href = "pag4.html"
 };
 
+
+
  //
 
 
