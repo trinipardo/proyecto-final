@@ -1,7 +1,7 @@
 var apiKey = "e3bcfbf11e6b8143b068f8b59c89e7bf";
 var apiReadKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlM2JjZmJmMTFlNmI4MTQzYjA2OGY4YjU5Yzg5ZTdiZiIsInN1YiI6IjVkYzcwNDkxOWMyNGZjMDAxNWMyOTI4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VJOtHTzGUTC_LsCop_LYgvqj9UlM9SsKUxCwIaqRkaI";
 var apiURL = "https://api.themoviedb.org/3/movie/550?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf";
-
+// HICIMOS CON MARTIN D EPRUEBA
 window.onload = function(){
 
   apiURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKey + "&language=es-AR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
@@ -19,9 +19,12 @@ window.onload = function(){
         var pelis = datos.results;
         console.log(pelis);
         /* recorro el array agregando los resultados al html: */
+
         for(indice = 0; indice < pelis.length; indice++){
+
           //innerHTML accede al contenido que esta adentro de una etiqueta
-          etiquetaQueQuieroCambiar.innerHTML += pelis[indice].title + "<br />";
+          etiquetaQueQuieroCambiar.innerHTML += pelis[indice].title + pelis[indice].poster_path + "<br />";
+
         }
 
       });
@@ -30,6 +33,34 @@ window.onload = function(){
 
 }
 
+<<<<<<< HEAD
+=======
+// popularity
+
+fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b986a9112d505&page=1")
+    .then(function(respuesta) {
+      return respuesta.json()
+    })
+    .then(function(informacion) {
+//       console.log(informacion);
+// console.log("popular");
+      var arrayPeliculas = informacion.results
+      // console.log(arrayPeliculas);
+
+      for (var i = 0; i < arrayPeliculas.length; i++) {
+        var id = arrayPeliculas[i].id
+        var title = arrayPeliculas[i].title
+        var poster = arrayPeliculas[i].poster_path
+
+        document.querySelector("ul#popular").innerHTML += "<li> <a href='../5.DetallePelicula/pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+
+      }
+
+    })
+    .catch(function(error) {
+      console.log("Error: " + error);
+    })
+>>>>>>> master
 
     //.catch (function (errores)){console.log(errores)};//
     // FETCH DE SERIES TOP RATED

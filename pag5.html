@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Detalle de la serie</title>
-    <link rel="stylesheet" href="css/pag5.css">
-      <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>My Web Site</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+  <script type='text/javascript' src='js/index.js'></script>
+  <script type='text/javascript' src='js/pag1api.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
 
-    <header class="topHeader">
-        <nav>
-              <ul class="ul-logo">
-                  <li class="li-logo"><img src="images/logo movie.jpg" alt="logo"></li>
-              </ul>
-              <ul class="ul-menu">
-                  <li class="li-menu"><a id="homeLink" href="index.html">HOME</a></li>
-                  <li class="li-menu"><a id="peliculasLink"  href="pag2.html">GENERO</a></li>
-
+  <!-- Header-->
 
 
-
-                  <input class="li-menu" type="text" name="buscador" value="">
-                  <button class="li-menu"id="seriesGenero" type="search" name="button"> BUSCAR</button>
+  <header class="topHeader">
 
 
 
-              </ul>
-          </nav>
-      </header>
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#"><img src="images/logo movie.jpg" alt="logo"></a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag2.html">Géneros</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <li class="resgister">
+          <a class="nav-link" href="#registrarse"> <i class="far fa-user"></i> Registrarse</a>
+        </li>
+      </div>
+    </nav>
+    </header>
 
       <section class="mainContainer">
         <h1>DETALLE DE LA SERIE</h1>
