@@ -19,7 +19,9 @@ seriesPorGenero.onclick = function (){
 }
  //seriesGenero.onclick = function (){
 //   window.location.href = "pag4.html"
- }//
+};
+
+ //
 
 
  /* var apiKey = "e3bcfbf11e6b8143b068f8b59c89e7bf";

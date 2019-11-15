@@ -28,19 +28,66 @@ window.onload = function(){
 
 }
     //.catch (function (errores)){console.log(errores)};//
+    // FETCH DE SERIES TOP RATED
 
-    fetch ('https://api.themoviedb.org/3/tv/top_rated?page=1&language=en-US&api_key=%3C%3Capi_key%3E%3E')
-    .then(function(response){ return response.json(); })
-    .then(
-      function (datos2){
-        var toprated = document.getElementById ('dataContainer');
+        fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=" + apiKey + "&language=en-US&api_key=%3C%3Capi_key%3E%3E")
+          .then(function(response) {
+            return response.json(); })
+          .then(function(datos) {
+    //         console.log(informacion);
+    // console.log("estrenos");
+    var etiquetaQueQuieroCambiar = document.getElementById('topRated');
+    console.log (datos);
 
-        var series = datos2.results;
-        console.log(series)
+    var tops = datos.results;
+    console.log (tops)
 
-        for(indice = 0; indice < series.length; indice++){
-          //innerHTML accede al contenido que esta adentro de una etiqueta
-          toprated.innerHTML += series[indice].title + "<br />";
 
-        }
-      });
+    console.log (datos);
+
+            // console.log(arrayPeliculas);
+
+            for (var i = 0; i < arraySeries.length; i++) {
+              var id = arraySeries[i].id
+              var title = arraySeries[i].title
+              var poster = arraySeries[i].poster_path
+    // console.log("https://image.tmdb.org/t/p/w500" + poster);
+              document.querySelector("ul#top").innerHTML += "<li> <a href='pag5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+
+            }
+
+          })
+          .catch(function(error) {
+
+          })
+
+      // FETCH DE SERIES AL AIRE
+
+fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=" + apiKey + "&language=en-US&api_key=%3C%3Capi_key%3E%3E")
+        .then(function(respuesta) {
+          return respuesta.json(); })
+        .then(function(datos2) {
+  //         console.log(informacion);
+  // console.log("estrenos");
+  var etiquetaQueQuieroCambiar = document.getElementById('alAire');
+  console.log (datos2);
+
+  var aire = datos2.results;
+  console.log (aire)
+
+
+          // console.log(arrayPeliculas);
+
+          for (var i = 0; i < arrayPeliculas.length; i++) {
+            var id = arrayPeliculas[i].id
+            var title = arrayPeliculas[i].title
+            var poster = arrayPeliculas[i].poster_path
+  // console.log("https://image.tmdb.org/t/p/w500" + poster);
+            document.querySelector("ul#upcoming").innerHTML += "<li> <a href='pag5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+
+          }
+
+        })
+        .catch(function(error) {
+
+        })
