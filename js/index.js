@@ -52,6 +52,8 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
 //   window.location.href = "pag4.html"
 };
 
+
+
  //
 
 

@@ -33,6 +33,8 @@ window.onload = function(){
 
 }
 
+<<<<<<< HEAD
+=======
 // popularity
 
 fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b986a9112d505&page=1")
@@ -58,6 +60,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b98
     .catch(function(error) {
       console.log("Error: " + error);
     })
+>>>>>>> master
 
     //.catch (function (errores)){console.log(errores)};//
     // FETCH DE SERIES TOP RATED
