@@ -130,7 +130,12 @@ footer div {
   }
 
 
-@media only screen and (max-width: 768px){}
+@media only screen and (max-width: 768px){
+
+footer
+
+
+}
 /* AYUDA*/
   section.login {
       padding: 150px; text-align: center;
