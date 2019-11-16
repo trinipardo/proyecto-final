@@ -1,4 +1,5 @@
-window.onload = function()
+
+/*  window.onload = function()
 
 //
 
@@ -19,10 +20,9 @@ window.onload = function()
 
   }
 seriesPorGenero.onclick = function (){
-  window.location.href = "pag3.html";
-
+  window.location.href = "pag3.html";  */
   /*
-    Carousel HOME
+    Carousel HOME 1
 */
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 
