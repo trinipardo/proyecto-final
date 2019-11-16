@@ -140,3 +140,17 @@ footer
   section.login {
       padding: 150px; text-align: center;
   }
+  /* aplicado en el html */
+  .btn-primary {
+    color: #212529;
+    background-color: #04fffc;
+    border-color: #0bfefc;
+}
+.titulologin  {
+    margin: auto;
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 80px;
+}
