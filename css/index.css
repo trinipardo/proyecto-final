@@ -29,8 +29,10 @@ div#dataContainer {
 }
 
 
-.mainContainer{background-color: black
-  ;}
+.mainContainer{
+    background-color: black;
+}
+
 #dataContainer{width: 1000px; margin:auto}
 
 header nav ul {
@@ -83,8 +85,8 @@ footer {
   background-image: url(../images/footer.jpg);
   background-size: contain;
   border: solid 3px #FF00CD;
-
 }
+
 h1 {margin: auto; padding: 20px 20px; text-align: center; color: white;}
 
 .logofooter{
@@ -344,4 +346,9 @@ li.resgister {
   form.search {
       display: block;
   }
+}
+
+
+#carousel-recomendaciones{
+  display: none;
 }
