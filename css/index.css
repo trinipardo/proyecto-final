@@ -27,6 +27,25 @@ header ul li.li-menu a {
 div#dataContainer {
     color: #fff;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+    COLOR: WHITE; list-style: none;
+}
+
+a {
+    color: #ec01c2;
+    text-decoration: none;
+    background-color: transparent;
+}
+h1 {
+    margin: auto;
+    padding: 20px 20px;
+    text-align: center;
+    color: #03e6e8;
+}
+p {
+    color: #3dcbcb;
+  font-size: 50px;   }
 
 
 .mainContainer{
