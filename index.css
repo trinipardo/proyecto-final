@@ -154,3 +154,10 @@ footer
     background-color: black;
     font-size: 80px;
 }
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    COLOR: #343a40;
+    list-style: none;
+    text-align: center;
+}
