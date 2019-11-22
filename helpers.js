@@ -30,18 +30,18 @@ function cargarCarousel( url, carousel, carouselInner){
           }
 
           $( "#" + carouselInner + ' .carousel-item').first().addClass('active');
-         
+
           $('#' + carousel).carousel( {interval: 1000} );
 
 
           $('#' + carousel).on('slide.bs.carousel', function (e) {
-  
+
 
               var $e = $(e.relatedTarget);
               var idx = $e.index();
               var itemsPerSlide = 5;
               var totalItems = $('#' + carousel + '  .carousel-item').length;
-           
+
               if (idx >= totalItems-(itemsPerSlide-1)) {
                   var it = itemsPerSlide - (totalItems - idx);
                   for (var i=0; i<it; i++) {
@@ -55,12 +55,13 @@ function cargarCarousel( url, carousel, carouselInner){
                   }
               }
           });
-        
+
         }
       );
 
 }
 
+/*! GENEROS */
 
 function mostrarNombreGeneroActivo(){
 
@@ -72,7 +73,7 @@ function mostrarNombreGeneroActivo(){
     }
     ).then(
       (generos) =>{
-        
+
         nombreGeneroActivo = "Genero inexistente";
 
         var params = new URLSearchParams( document.location.search );
@@ -92,7 +93,7 @@ function mostrarNombreGeneroActivo(){
           else{
             numGenero++;
           }
-         
+
         }
 
         if ( encontrado ){
@@ -103,19 +104,20 @@ function mostrarNombreGeneroActivo(){
 
       }
     );
-  
+
 
 }
 
+/*! SERIES POR GENERO */
 function cargarListadoSeriesPorGenero( idGenero ){
 
   var url = "https://api.themoviedb.org/3/discover/tv?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&sort_by=popularity.desc&page=1&with_genres=" + idGenero;
 
-  fetch(url).then(  
+  fetch(url).then(
     function(response){
       return response.json();
     }
-  ).then( 
+  ).then(
     function(seriesGenero){
 
       mostrarNombreGeneroActivo();
@@ -126,6 +128,7 @@ function cargarListadoSeriesPorGenero( idGenero ){
 
 }
 
+/*! DETALLES DE CADA SERIE */
 function cargarTarjetaDetalle( serie ){
 
     var contenedorImagen = document.getElementById( "contenedor-imagen-detalle");
@@ -164,7 +167,7 @@ function cargarTarjetaDetalle( serie ){
 
       infoSerieHTML += '</li>';
     }
-    
+
     infoSerieHTML += '</ul>';
 
     contenedorInfo.innerHTML = infoSerieHTML;
@@ -174,11 +177,11 @@ function cargarTarjetaDetalle( serie ){
 
     var urlTrailer = "https://api.themoviedb.org/3/tv/" + serie.id + "/videos?&api_key=e3bcfbf11e6b8143b068f8b59c89e7bf";
 
-    fetch( urlTrailer ).then(  
+    fetch( urlTrailer ).then(
       function(response){
         return response.json();
       }
-    ).then( 
+    ).then(
       function( trailers ){
 
         var htmlTrailer = "";
@@ -253,18 +256,19 @@ function cargarDetalleSerie( idSerie ){
 
   var url = "https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&language=es-mx";
 
-    fetch(url).then(  
+    fetch(url).then(
       function( response ){
         return response.json();
       }
-    ).then( 
+    ).then(
       function( detalleSerie ){
-      
+
         cargarTarjetaDetalle(  detalleSerie )
       }
     );
 }
 
+/*! RECOMENDACIONES */
 function cargarRecomendaciones( idSerie ){
 
   var url = "https://api.themoviedb.org/3/tv/" + idSerie + "/recommendations?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&page=1";
@@ -274,7 +278,7 @@ function cargarRecomendaciones( idSerie ){
   recomendaciones.innerHTML = "<h1>RECOMENDACIONES</h1>";
 
   cargarCarousel(url, "carousel-recomendaciones" , "carousel-recomendaciones-inner");
-  
+
   document.getElementById("carousel-recomendaciones").style.display = 'block';
 }
 
@@ -282,13 +286,13 @@ function cargarRecomendaciones( idSerie ){
 function cargarGeneros(){
   var url = "https://api.themoviedb.org/3/genre/tv/list?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&page=1&language=es-mx";
 
-  fetch(url).then(  
+  fetch(url).then(
     function(response){
       return response.json();
     }
-  ).then( 
+  ).then(
     function(generos){
-  
+
       var tablaGeneros = document.getElementById("tablaGeneros");
 
       var tablaHTML = "";
@@ -330,22 +334,24 @@ $(document).ready(
     cargarCarousel('https://api.themoviedb.org/3/tv/popular?api_key=' + apiKey + '&page=1&language=es-mx', "carousel-mas-populares" , "carousel-mas-populares-inner");
     cargarCarousel('https://api.themoviedb.org/3/tv/top_rated?api_key=' + apiKey + '&page=1&language=es-mx', "carousel-mejor-calificadas" , "carousel-mejor-calificadas-inner");
     cargarCarousel('https://api.themoviedb.org/3/tv/airing_today?api_key=' + apiKey + '&page=1&language=es-mx', "carousel-al-aire" , "carousel-al-aire-inner");
-       
+
   }
 );
 
+/*! BUSCADOR */
 function ejecutarBusqueda(){
   var textoBuscado = document.getElementById("txtBusqueda").value;
 
   location.href = "pag4.html?textoBuscado=" + textoBuscado;
 }
 
+/*! BUSCADOR AVANZADO */
 function ejecutarBusquedaAvanzada(){
 
   var year = document.getElementById("year").value;
   var idGeneroIncluir = document.getElementById("genero_a_incluir").value;
-  var idGeneroExcluir = document.getElementById("genero_a_excluir").value; 
-  var orden = document.getElementById("orden").value; 
+  var idGeneroExcluir = document.getElementById("genero_a_excluir").value;
+  var orden = document.getElementById("orden").value;
 
 
   if ( validarFormularioBusquedaAvanzada() == true ){
@@ -361,11 +367,11 @@ function ejecutarBusquedaAvanzada(){
 
     url = "https://api.themoviedb.org/3/discover/tv?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&language=es-mx&sort_by=" + orden + "&first_air_date_year=" + year + "&page=1&without_genres=" + idGeneroExcluir + "&with_genres=" + idGeneroIncluir;
 
-    fetch(url).then(  
+    fetch(url).then(
       function(response){
         return response.json();
       }
-    ).then( 
+    ).then(
       function( resultadoBusqueda ){
 
           cargarResultadoBusquedaAvanzada( resultadoBusqueda );
@@ -402,6 +408,7 @@ function validarFormularioBusquedaAvanzada(){
 
 }
 
+/*! RESULTADOS DEL BUSCADOR */
 function cargarResultadoBusqueda(){
 
   var params = new URLSearchParams(location.search);
@@ -410,11 +417,11 @@ function cargarResultadoBusqueda(){
 
   var url = "https://api.themoviedb.org/3/search/tv?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&language=es-mx&query=" + textoBuscado + "&page=1";
 
-  fetch(url).then(  
+  fetch(url).then(
     function(response){
       return response.json();
     }
-  ).then( 
+  ).then(
     function(seriesEncontradas){
 
       if ( seriesEncontradas.total_results > 0 ) {
@@ -428,7 +435,7 @@ function cargarResultadoBusqueda(){
   );
 
 }
-
+/*! RESULTADOS DEL BUSCADOR AVANZADO */
 function cargarResultadoBusquedaAvanzada( seriesEncontradas ){
 
     if ( seriesEncontradas.total_results > 0 ) {
@@ -454,14 +461,14 @@ function cargarCombo( nombreDelCombo, data ){
 }
 
 function initFormBusqueda(){
-  
+
   var url = "https://api.themoviedb.org/3/genre/tv/list?api_key=e3bcfbf11e6b8143b068f8b59c89e7bf&page=1&language=es-mx";
 
-  fetch(url).then(  
+  fetch(url).then(
     function(response){
       return response.json();
     }
-  ).then( 
+  ).then(
     function(generos){
 
       cargarCombo("genero_a_incluir", generos.genres);

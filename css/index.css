@@ -371,3 +371,7 @@ li.resgister {
 #carousel-recomendaciones{
   display: none;
 }
+.card-title {
+    margin-bottom: .75rem;
+    color: black;
+}

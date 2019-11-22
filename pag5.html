@@ -36,19 +36,20 @@
             <a class="nav-link" href="pag2.html">Géneros</a>
           </li>
         </ul>
-       
-        <div class="caja-buscador">
-       
-          <form class="form-inline my-2 my-lg-0 search">
-            <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <div onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</div>
-          </form>
 
-          <li class="resgister">
-            <a class="nav-link" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
-          </li>
-        </div>
-        
+        <div class="caja-buscador row" >
+
+            <div class="col-7">
+              <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <div><a style="color: white;" href="pag6.html">Busqueda avanzada</a></div>
+            </div>
+
+            <div class="col-5">
+              <span onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</span>
+              <a style="color: white;" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
+            </div>
+
+
       </div>
     </nav>
     </header>
@@ -61,14 +62,14 @@
         <div>
 
           <div id='contenedor-detalle-serie' class="container">
-            
+
 
             <div class="row mx-5 mt-2 p-5">
 
               <div id="contenedor-imagen-detalle" class="col-4"></div>
 
               <div class="col-8">
-                
+
                 <div class="row">
 
                   <div id="contenedor-info-detalle" class="col">
@@ -80,7 +81,7 @@
                 <div class="row">
 
                   <div id="contenedor-trailer-detalle" class="col">
- 
+
                   </div>
 
                 </div>
@@ -97,11 +98,11 @@
           <p onclick="cargarRecomendaciones( getIdSerieAMostrar() );">Mostrar recomendaciones</p>
         </div>
 
-        
+
         <div class="container-fluid">
           <div id="carousel-recomendaciones" class="carousel slide" data-ride="carousel">
               <div id="carousel-recomendaciones-inner" class="carousel-inner row w-100 mx-auto" role="listbox">
-                  
+
               </div>
               <a class="carousel-control-prev" href="#carousel-recomendaciones" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -139,7 +140,7 @@
 
       function getIdSerieAMostrar(){
 
-        var params = new URLSearchParams( window.location.search ); 
+        var params = new URLSearchParams( window.location.search );
 
         return params.get("id_serie");
       }

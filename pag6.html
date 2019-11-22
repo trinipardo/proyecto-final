@@ -40,18 +40,18 @@
           </li>
         </ul>
 
-        <div class="caja-buscador">
-       
-          <form class="form-inline my-2 my-lg-0 search">
-            <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <div onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</div>
-          </form>
+        <div class="caja-buscador row" >
 
-          <li class="resgister">
-            <a class="nav-link" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
-          </li>
+            <div class="col-7">
+              <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <div><a style="color: white;" href="pag6.html">Busqueda avanzada</a></div>
+            </div>
 
-        </div>
+            <div class="col-5">
+              <span onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</span>
+              <a style="color: white;" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
+            </div>
+
 
       </div>
     </nav>
@@ -68,10 +68,10 @@
               <div>
 
                 <form>
-                 
+
                   <div class="form-group">
 
-                    <label for="genero_a_incluir">Genero</label> 
+                    <label for="genero_a_incluir">Genero</label>
 
                     <div>
                       <select id="genero_a_incluir" name="genero_a_incluir" class="custom-select">
@@ -81,7 +81,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="genero_a_excluir">Genero a excluir</label> 
+                    <label for="genero_a_excluir">Genero a excluir</label>
 
                     <div>
 
@@ -93,12 +93,12 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="year">Año de estreno</label> 
+                    <label for="year">Año de estreno</label>
                     <input id="year" name="year" type="number" class="form-control">
-                  </div> 
+                  </div>
 
                   <div class="form-group">
-                    <label for="orden">Orden</label> 
+                    <label for="orden">Orden</label>
                     <div>
                       <select id="orden" name="orden" class="custom-select">
                         <option value="popularity.desc">Popularidad Descendente</option>
@@ -126,13 +126,13 @@
     </section>
 
     <section class="mainContainer">
-  
+
       <h1 id="titulo-resultado-busqueda"></h1>
 
       <div id="contenedor-resultado-busqueda" class="row">
-        
+
       </div>
-  
+
     </section>
 
 
@@ -158,7 +158,7 @@
     <script src="helpers.js"></script>
 
     <script>
-      
+
       initFormBusqueda();
 
     </script>
