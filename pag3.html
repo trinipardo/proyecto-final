@@ -39,18 +39,17 @@
           </li>
         </ul>
 
-        <div class="caja-buscador">
-       
-          <form class="form-inline my-2 my-lg-0 search">
-            <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <div onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</div>
-          </form>
+        <div class="caja-buscador row" >
 
-          <li class="resgister">
-            <a class="nav-link" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
-          </li>
-          
-        </div>
+            <div class="col-7">
+              <input id="txtBusqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <div><a style="color: white;" href="pag6.html">Busqueda avanzada</a></div>
+            </div>
+
+            <div class="col-5">
+              <span onclick="ejecutarBusqueda();" class="btn btn-outline-success my-2 my-sm-0">Buscar</span>
+              <a style="color: white;" href="login.html"> <i class="far fa-user"></i> LOGIN</a>
+            </div>
 
       </div>
     </nav>
